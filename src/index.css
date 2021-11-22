@@ -1,8 +1,10 @@
+ @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Michroma&family=Racing+Sans+One&family=Syncopate:wght@700&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: rgba(0, 0, 0, 0.733);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +12,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bs1 {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+}
+
+h1 {
+  font-size:30px;
+  font-weight: bold;
+  font-family: 'Michroma';
+  color:rgb(206, 209, 43)
+  
+}
+
+.header {
+  padding: 10px;
+  /* background-color: rgb(42, 39, 39); */
+}
+
+.content {
+  min-height: 90vh;
+  padding: 10px;
+  
 }
