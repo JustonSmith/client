@@ -1,13 +1,23 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
+import { useSelector , useDispatch } from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout'
+import { getAllCars } from '../redux/actions/carsActions'
+
 
 function Home() {
+    const {cars , loading} = useSelector(state=>state.carsReducer)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getAllCars())
+    },[''])
+
+
     return (
-        <div>
             <DefaultLayout>
                 <h1>uDrive Home Page</h1>
+                <h1>The length of cars array is {cars.length} </h1>
             </DefaultLayout>
-        </div>
     )
 }
 
