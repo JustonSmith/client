@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-.bs1 {
+.bs1 { 
   box-shadow: rgb(83, 81, 81) 0px 2px 4px 0px, rgb(75, 74, 74) 0px 2px 16px 0px; 
 }
 
@@ -59,6 +59,16 @@ button {
 .header {
   padding: 10px;
   /* background-color: rgb(42, 39, 39); */
+}
+
+.header .ant-btn {
+  box-shadow: none !important;
+  background-color : white !important;
+  color :rgb(255, 0, 0) !important;
+  border: 1px solid rgb(255, 0, 0) !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+  border-radius: 7px;
 }
 
 .content {
@@ -128,7 +138,7 @@ button {
   top: 0;
   bottom: 80%;
   transform: translateY(-50%, -50%);
-  font-size: 100px;
+  font-size: 100px !important;
   opacity: 0.5;
   color: red;
 }
