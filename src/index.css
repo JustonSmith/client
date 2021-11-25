@@ -15,21 +15,21 @@ code {
 }
 
 .bs1 {
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+  box-shadow: rgb(83, 81, 81) 0px 2px 4px 0px, rgb(75, 74, 74) 0px 2px 16px 0px; 
 }
 
 .spinner {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 9999;
 }
 
 h1 {
   font-size:30px;
   font-weight: bold;
   font-family: 'Michroma';
-  color:rgb(206, 209, 43) !important;
+  color:rgb(0, 0, 0) !important;
   
 }
 
@@ -42,9 +42,18 @@ p {
 .btn1 {
   box-shadow: none !important;
   background-color: white !important;
-  color:rgb(206, 209, 43) !important;
-  border: 1px solid rgb(206, 209, 43) !important; 
+  color:rgb(255, 3, 3)!important;
+  border: 1px solid rgb(255, 0, 0) !important; 
+  border-radius: 5px;
+  outline: none;
+}
 
+.btn1:focus {
+  border: none;
+}
+
+button {
+  padding: 10px !important;
 }
 
 .header {
@@ -88,4 +97,42 @@ p {
   transition: 0.3s;
 }
 
+.login {
+  background-color: black;
+  min-height: 100vh;
+  padding-top: 90px;
+}
+.login label , .login h1{
+  color: white !important;
+  opacity: 0.6;
+}
 
+.login-form {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+}
+
+.login-form input {
+  background-color: #333333 !important;
+  border: none !important;
+  color: white;
+  opacity: 0.5;
+
+}
+
+
+.login-logo {
+  position: absolute;
+  left: 0;
+  right: 5%;
+  top: 0;
+  bottom: 80%;
+  transform: translateY(-50%, -50%);
+  font-size: 100px;
+  opacity: 0.5;
+  color: red;
+}
+
+.login-logo:hover {
+  color:rgb(255, 0, 0);
+}
