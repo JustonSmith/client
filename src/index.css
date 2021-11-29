@@ -35,8 +35,6 @@ h1 {
 
 p {
   margin: 5px !important;
-  text-align: left;
-  padding: 0;
 }
 
 .btn1 {
@@ -145,4 +143,15 @@ button {
 
 .login-logo:hover {
   color:rgb(255, 0, 0);
+}
+
+.login a {
+  color: white !important;
+  opacity: 0.5;
+}
+
+.carimg2 {
+  height: 400px;
+  border-radius: 10px;
+  width: auto;
 }
