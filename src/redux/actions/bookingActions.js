@@ -2,13 +2,14 @@ import axios from 'axios';
 import { message } from 'antd';
 
 
-export const bookCar=(reqObj) => async dispatch => {
-    
+export const bookCar = (reqObj) => async dispatch => {
     dispatch({type: 'LOADING' , payload : true})
-    message.success("Your rental has sucessfully been booked.")
+
     try {
-        await axios.post('/api/bookings/bookcar')
+        await axios.post('/api/bookings/bookcar', reqObj)
+        
         dispatch({type : 'LOADING' , payload : false})
+        message.success("Your rental has sucessfully been booked.")
     } catch (error) {
         console.log(error)
         dispatch({type : 'LOADING' , payload : false})

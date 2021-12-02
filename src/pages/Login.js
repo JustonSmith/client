@@ -52,6 +52,7 @@ function Login() {
                             <Input />
                         </Form.Item>
                         <Form.Item 
+                        type="password"
                         name= 'password' 
                         label= 'password' 
                         rules={[{required:true}]}

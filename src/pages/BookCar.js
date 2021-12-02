@@ -64,7 +64,7 @@ function BookCar() {
             car : car._id ,
             totalHours ,
             totalAmount ,
-            driverRequire : driver ,
+            driverRequired : driver ,
             bookedTimeSlots : {
                 from,
                 to
