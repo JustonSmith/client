@@ -107,7 +107,7 @@ function BookCar() {
                         <hr />
                         <h3> Total: {totalAmount} </h3>
 
-                        <button className='btn1' onCLick= {bookNow}>Book Rental</button>
+                        <button className='btn1' onClick= {bookNow}>Book Rental</button>
 
                     </div>
                 </Col>
