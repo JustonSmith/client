@@ -69,6 +69,10 @@ button {
   border-radius: 7px;
 }
 
+.home-logo {
+  color: rgb(255, 0, 0) !important;
+}
+
 .content {
   min-height: 90vh;
   padding: 10px;

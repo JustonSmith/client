@@ -92,6 +92,8 @@ function BookCar() {
                     <RangePicker showTime= {'HH:mm'} format= 'MMM DD yyyy HH:mm' onChange= {selectTimeSlots} />
                     </div>
                     <hr />
+                    
+                    {from && to && (
                     <div className="text-right">
                         <p> Total Hours : <b> {totalHours} </b></p>
                         <p> Per Hour : <b> {car.rentPerHour} </b></p>
@@ -110,6 +112,8 @@ function BookCar() {
                         <button className='btn1' onClick= {bookNow}>Book Rental</button>
 
                     </div>
+
+                    )}
                 </Col>
             </Row>
         </DefaultLayout>

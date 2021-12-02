@@ -1,5 +1,6 @@
 import React from 'react'
 import { Menu, Dropdown, Button, Row, Col, Space } from 'antd';
+import { Link } from 'react-router-dom';
 
 function DefaultLayout(props) {
 
@@ -40,7 +41,9 @@ function DefaultLayout(props) {
                     <Col lg={20} sm={20} xs={24}>
                     <div className= "d-flex justify-content-between">
 
-                    <h1> uDrive </h1>
+                        <h1 className="home-logo"> <Link to={`/`}>uDrive</Link> </h1>
+
+                        
 
                     <Dropdown overlay={menu} placement="bottomCenter">
                         <Button>{user.username}</Button>
