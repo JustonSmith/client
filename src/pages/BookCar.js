@@ -3,11 +3,11 @@ import React, { useState , useEffect } from 'react';
 import { useSelector , useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import DefaultLayout from '../components/DefaultLayout'
-// import Spinner from '../components/Spinner';
+import Spinner from '../components/Spinner';
 import { getAllCars } from '../redux/actions/carsActions'
 import { bookCar } from '../redux/actions/bookingActions'
 import moment from 'moment'
-import { Row , Col , Divider, DatePicker, Checkbox } from 'antd';
+import { Row , Col , Divider, DatePicker, Checkbox, Modal } from 'antd';
 
 const { RangePicker } = DatePicker
 
@@ -22,6 +22,7 @@ function BookCar() {
     const [totalHours , setTotalHours] = useState(0)
     const [driver , setDriver] = useState(false)
     const [totalAmount , setTotalAmount] = useState(0)
+    const [showModal , setShowModal] = useState(false)
 
 
     useEffect(() => {
@@ -76,7 +77,7 @@ function BookCar() {
 
     return (
         <DefaultLayout>
-            {/* {loading && (<Spinner />)} */}
+            {/* { loading && (<Spinner />)} */}
             <Row justify='center' className= 'd-flex align-items-center' style= {{minHeight: '90vh'}} >
                 <Col lg={10} sm={24} xs= {24}>
                     <img src= {car.image} alt="car" className= 'carimg2'/>
@@ -88,11 +89,14 @@ function BookCar() {
                         <p> Per Hour : ${car.rentPerHour} </p>
                         <p> Fuel : {car.fuelType} </p>
                         <p> Max Capacity : {car.capacity} </p>
+                    </div>
+
                     <Divider type='horizontal' dashed> Rental Date </Divider>
                     <RangePicker showTime= {'HH:mm'} format= 'MMM DD yyyy HH:mm' onChange= {selectTimeSlots} />
-                    </div>
+                    <br />
+                        <button className="btn1 mt-2" onClick= {() => {setShowModal(true)}}>See Booked Rentals</button>
                     <hr />
-                    
+
                     {from && to && (
                     <div className="text-right">
                         <p> Total Hours : <b> {totalHours} </b></p>
@@ -115,8 +119,29 @@ function BookCar() {
 
                     )}
                 </Col>
-            </Row>
-        </DefaultLayout>
+                {car.name && ( <Modal
+                    visible= {showModal} 
+                    closable={false} 
+                    footer={false} 
+                    title='Booked time slots'
+                    >
+
+                    
+                        <div className="p-2">
+                        {car.bookedTimeSlots.map(slot => {
+                            return (<button className="btn1 mt-2"> {slot.from} - {slot.to} </button>
+                        );
+                    })}
+
+                    <div className= 'text-right mt-2'>
+                        <button className= 'btn1' onClick={() => {setShowModal(false)}}>CLOSE</button>
+                    </div>
+                </div>
+        </Modal>)}
+    </Row>
+
+
+    </DefaultLayout>
     )
 }
 
