@@ -8,6 +8,7 @@ import { getAllCars } from '../redux/actions/carsActions'
 import { bookCar } from '../redux/actions/bookingActions'
 import moment from 'moment'
 import { Row , Col , Divider, DatePicker, Checkbox, Modal } from 'antd';
+import StripeCheckout from 'react-stripe-checkout';
 
 const { RangePicker } = DatePicker
 
@@ -58,9 +59,9 @@ function BookCar() {
 
     }
 
-    function bookNow() {
-
+    function onToken(token) {
         const reqObj = {
+            token,
             user : JSON.parse(localStorage.getItem('user'))._id ,
             car : car._id ,
             totalHours ,
@@ -73,6 +74,7 @@ function BookCar() {
         }
 
         dispatch(bookCar(reqObj))
+        console.log(token)
     }
 
     return (
@@ -113,8 +115,17 @@ function BookCar() {
                         <hr />
                         <h3> Total: {totalAmount} </h3>
 
-                        <button className='btn1' onClick= {bookNow}>Book Rental</button>
+                        <StripeCheckout
+                            shippingAddress
+                            token={onToken}
+                            currency='inr'
+                            amount = {totalAmount * 100}
+                            stripeKey="pk_test_51K38vRJxYcR9HsnhRkpHYcDXwNWiNNtYNTgaPKjYflK5hxYtBVOEGj0k22LbkUmANKan7FxpNxjVQtdKsdgUnFgD00SRlrpm0k">
 
+                            <button className='btn1'>
+                                Book Now
+                                </button>
+                        </StripeCheckout>
                     </div>
 
                     )}
