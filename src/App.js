@@ -7,6 +7,9 @@ import Register from './pages/Register'
 import BookCar from './pages/BookCar'
 
 import 'antd/dist/antd.css';
+import UserBookings from './pages/UserBookings';
+import AddCar from './pages/AddCar';
+import UserCars from './pages/UserCars';
 
 function App() {
   return (
@@ -19,7 +22,10 @@ function App() {
           <Route path='/' element= { <Home />} />
           <Route path='/login' element= { <Login />} />
           <Route path='/register' element= { <Register />} />
+          <Route path= '/addcar' element= { <AddCar />} />
           <Route path='bookcar/:carid' element= { <BookCar />} />
+          <Route path= '/userbookings' element= { <UserBookings />} />
+          <Route path= '/addcar' element= { <UserCars />} />
         </Routes>
       </Router>
 

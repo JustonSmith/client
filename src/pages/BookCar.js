@@ -82,7 +82,10 @@ function BookCar() {
             {/* { loading && (<Spinner />)} */}
             <Row justify='center' className= 'd-flex align-items-center' style= {{minHeight: '90vh'}} >
                 <Col lg={10} sm={24} xs= {24}>
-                    <img src= {car.image} alt="car" className= 'carimg2'/>
+                    <img 
+                    src= {car.image} 
+                    alt="car" 
+                    className= 'carimg2'/>
                 </Col>
                 <Col lg={10} sm={24} xs= {24}>
                     <Divider type='horizontal' dashed> Car Specs </Divider>
@@ -118,7 +121,7 @@ function BookCar() {
                         <StripeCheckout
                             shippingAddress
                             token={onToken}
-                            currency='inr'
+                            currency='USD'
                             amount = {totalAmount * 100}
                             stripeKey="pk_test_51K38vRJxYcR9HsnhRkpHYcDXwNWiNNtYNTgaPKjYflK5hxYtBVOEGj0k22LbkUmANKan7FxpNxjVQtdKsdgUnFgD00SRlrpm0k">
 
