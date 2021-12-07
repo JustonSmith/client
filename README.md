@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# uDrive
+
+Full stack car rental application using react, node.js, nodemon, MongoDD, Postman, Stripe Payment Gateway, react-redux, react-router v6, antd and moment.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
