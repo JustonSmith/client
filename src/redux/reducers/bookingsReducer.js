@@ -1,5 +1,5 @@
 const initialData = {
-    bookings : [ ]
+    bookings : [],
 };
 
 export const bookingsReducer = (state=initialData, action) => {

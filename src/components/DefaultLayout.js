@@ -9,12 +9,12 @@ function DefaultLayout(props) {
     const menu = (
         <Menu>
                         <Menu.Item>
-                <a href="https://www.antgroup.com">
+                <a href="/">
                 Home
                 </a>
             </Menu.Item>
             <Menu.Item>
-                <a href="https://www.antgroup.com">
+                <a href="/userbookings">
                 My Bookings
                 </a>
             </Menu.Item>
@@ -41,7 +41,7 @@ function DefaultLayout(props) {
                     <Col lg={20} sm={20} xs={24}>
                     <div className= "d-flex justify-content-between">
 
-                        <h1 className="home-logo"> <Link to={`/`}>uDrive</Link> </h1>
+                        <h1 className="home-logo"> <Link style={{color : 'red'}} to={`/`}>uDrive</Link> </h1>
 
                         
 

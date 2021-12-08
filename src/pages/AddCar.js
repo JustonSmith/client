@@ -4,7 +4,7 @@ import DefaultLayout from '../components/DefaultLayout'
 function AddCar() {
     return (
         <DefaultLayout>
-            <h1> My Bookings</h1>
+            <h1> Add Car</h1>
         </DefaultLayout>
     )
 }

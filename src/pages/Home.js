@@ -17,7 +17,7 @@ function Home() {
 
     useEffect(() => {
         dispatch(getAllCars())
-    },[])
+    },[dispatch])
 
     useEffect(() => {
 
@@ -66,6 +66,7 @@ function Home() {
                 <Row className='mt-3' justify='center'> 
             
                     <Col lg={20} sm={24} className='d-flex justify-content-left'>
+                        <p style={{color :'black'}}> Check Availible Dates : </p>
 
                         <RangePicker showTime = {{format : 'HH:mm'}} format = 'MMM DD yyyy HH:mm' onChange={setFilter} />
 
