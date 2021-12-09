@@ -43,7 +43,7 @@ function EditCar() {
             <h1> Edit Car : </h1>
             <hr />
             <Row justify="center mt-5">
-                <Col lg={12} sm={24}>
+                <Col lg={12} sm={24} xz={24} className="p-2">
                     {totalcars.length>0 && (
 
                     <Form initialValues={car} className="bs1 p-2" layout='vertical' onFinish={onFinish}>
@@ -69,8 +69,10 @@ function EditCar() {
                         </Form.Item>
 
                         <div className="text-right">
-                            <button className= 'btn1'>EDIT</button>
+                            <button className= 'btn1 m-2'>EDIT</button>
+                            <button className= 'btn1 m-2'><a href="/admin">BACK</a></button>
                         </div>
+
 
                     </Form>)}
                 </Col>

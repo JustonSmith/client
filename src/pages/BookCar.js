@@ -9,6 +9,8 @@ import { bookCar } from '../redux/actions/bookingActions'
 import moment from 'moment'
 import { Row , Col , Divider, DatePicker, Checkbox, Modal } from 'antd';
 import StripeCheckout from 'react-stripe-checkout';
+import 'aos/dist/aos.css';
+import AOS from 'aos'
 
 const { RangePicker } = DatePicker
 
@@ -81,11 +83,13 @@ function BookCar() {
         <DefaultLayout>
             {/* { loading && (<Spinner />)} */}
             <Row justify='center' className= 'd-flex align-items-center' style= {{minHeight: '90vh'}} >
-                <Col lg={10} sm={24} xs= {24}>
-                    <img 
+                <Col lg={10} sm={24} xs= {24} className='p-3'>
+                    <img
+                    data-aos='flip-left'
+                    data-aos-duration='1500'
                     src= {car.image} 
                     alt="car" 
-                    className= 'carimg2'/>
+                    className= 'carimg2 bs1 w-100 p-2'/>
                 </Col>
                 <Col lg={10} sm={24} xs= {24}>
                     <Divider type='horizontal' dashed> Car Specs </Divider>
@@ -100,6 +104,7 @@ function BookCar() {
                     <RangePicker showTime= {'HH:mm'} format= 'MMM DD yyyy HH:mm' onChange= {selectTimeSlots} />
                     <br />
                         <button className="btn1 mt-2" onClick= {() => {setShowModal(true)}}>See Booked Rentals</button>
+                        <button className= 'btn1 m-2 text-right'><a href="/">BACK</a></button>
                     <hr />
 
                     {from && to && (
@@ -153,6 +158,7 @@ function BookCar() {
                 </div>
         </Modal>)}
     </Row>
+        
 
 
     </DefaultLayout>

@@ -95,7 +95,9 @@ function Home() {
                     })}
                 </Row>
             </DefaultLayout>
+            
     )
 }
+<br/>
 
 export default Home

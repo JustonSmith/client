@@ -47,6 +47,9 @@ function UserBookings() {
                             })}
                     </Col>
             </Row>
+            <div>
+            <button className= 'btn1 m-2'><a href='/'>BACK</a></button>
+            </div>
         </DefaultLayout>
     )
 }

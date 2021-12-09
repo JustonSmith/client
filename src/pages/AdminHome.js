@@ -34,7 +34,8 @@ function AdminHome() {
                 <Row justify="center" gutter={16} className='mt-2'>
 
                     <Col lg={20} sm={24}>
-                        <div className="text-left">
+                        <div className="d-flex justify-content-between align-items-center">
+                            <h3 className="mt-1 mr-2"> Admin </h3>
                             <button className="btn1"><a href="/addcar">Add Car</a></button>
                         </div>
                     </Col>

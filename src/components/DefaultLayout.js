@@ -7,7 +7,7 @@ function DefaultLayout(props) {
         const user = JSON.parse(localStorage.getItem('user'))
 
     const menu = (
-        <Menu>
+        <Menu className="dropmenu">
                         <Menu.Item>
                 <a href="/">
                 Home
@@ -27,7 +27,7 @@ function DefaultLayout(props) {
                 localStorage.removeItem('user');
                 window.location.href='/login';
             }} >
-                <li>
+                <li style={{color:'red'}}>
                     Logout
                 </li>
             </Menu.Item>
@@ -56,6 +56,11 @@ function DefaultLayout(props) {
             </div>
             <div className= "content">
                 {props.children}
+            </div>
+            <div className="footer text-center bs1">
+                <p>Designed and Developed by: </p>
+                <p>Juston Smith</p>
+
             </div>
         </div>
     )

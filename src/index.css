@@ -15,7 +15,7 @@ code {
 }
 
 .bs1 { 
-  box-shadow: rgb(83, 81, 81) 0px 2px 4px 0px, rgb(75, 74, 74) 0px 2px 16px 0px; 
+  box-shadow: rgb(73, 72, 72) 0px 2px 4px 0px, rgb(75, 74, 74) 0px 2px 16px 0px; 
 }
 
 .spinner {
@@ -39,10 +39,10 @@ p {
 
 .btn1 {
   box-shadow: none !important;
-  background-color: white !important;
-  color:rgb(255, 3, 3)!important;
-  border: 1px solid rgb(255, 0, 0) !important; 
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.452) !important;
+  color:white !important;
+  border: 1px solid rgb(19, 167, 226) !important; 
+  border-radius: 3px;
   outline: none;
 }
 
@@ -56,27 +56,33 @@ button {
 
 .header {
   padding: 10px;
-  /* background-color: rgb(42, 39, 39); */
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
 .header .ant-btn {
   box-shadow: none !important;
-  background-color : white !important;
-  color :rgb(255, 0, 0) !important;
-  border: 1px solid rgb(255, 0, 0) !important;
+  background-color : rgba(0, 0, 0, 0.452) !important;
+  color :rgb(255, 255, 255) !important;
+  border: 1px solid rgb(19, 167, 226) !important;
   padding: 5px 15px !important;
   outline: none !important;
   border-radius: 7px;
 }
 
 .home-logo {
-  color: rgb(255, 0, 0) !important;
+  color: rgb(19, 167, 226) !important;
+  box-shadow: inset;
 }
 
 .content {
+  background-color:rgba(105, 105, 105, 0.472);
   min-height: 90vh;
   padding: 10px;
   
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.386);
 }
 
 .car {
@@ -89,11 +95,14 @@ button {
 
 .car:hover {
   height: 220px;
+  background-color:rgba(0, 0, 0, 0.363);
 }
 
 .car:hover > .car-content {
   opacity:1;
   transform: translateY(-40px);
+  background-color:rgba(200, 200, 200, 0.472);
+  border-radius: 10px;
 }
 
 .carimg {
@@ -114,6 +123,7 @@ button {
   transform: translateY(-200px);
   opacity: 0;
   transition: 0.3s;
+  background-color: white;
 }
 
 .login {
@@ -122,7 +132,7 @@ button {
   padding-top: 90px;
 }
 .login label , .login h1{
-  color: white !important;
+  color: rgb(19, 167, 226) !important;
   opacity: 0.6;
 }
 
@@ -147,21 +157,29 @@ button {
   top: 0;
   bottom: 80%;
   transform: translateY(-50%, -50%);
-  font-size: 100px !important;
+  font-size: 150px !important;
   opacity: 0.5;
-  color: red;
+  color: rgb(19, 167, 226);
 }
 
 .login-logo:hover {
-  color:rgb(255, 0, 0);
+  color:rgb(19, 167, 226);
 }
 
 .login a {
-  color: white !important;
+  color: rgb(19, 167, 226) !important;
   opacity: 0.5;
 }
 
 svg {
   height: 20px !important;
   width: 20px !important;
+} 
+
+a {
+  color :rgb(19, 167, 226) !important;
+}
+
+dropmenu {
+  background-color:(0, 0, 0, 0.363);
 }
