@@ -160,3 +160,8 @@ button {
   color: white !important;
   opacity: 0.5;
 }
+
+svg {
+  height: 20px !important;
+  width: 20px !important;
+}
