@@ -121,7 +121,7 @@ function BookCar() {
                             }
                         }} > Driver required </Checkbox>
                         <hr />
-                        <h3> Total: {totalAmount} </h3>
+                        <h3> Total: ${totalAmount} </h3>
 
                         <StripeCheckout
                             shippingAddress
