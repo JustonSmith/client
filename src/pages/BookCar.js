@@ -92,15 +92,15 @@ function BookCar() {
                     className= 'carimg2 bs1 w-100 p-2'/>
                 </Col>
                 <Col lg={10} sm={24} xs= {24}>
-                    <Divider type='horizontal' dashed> Car Specs </Divider>
+                    <Divider type='horizontal' dashed className="dashcolor"> <b className="textcolor">Car Specs</b> </Divider>
                     <div className= 'text-right' >
-                        <p> {car.name} </p>
-                        <p> Per Hour : ${car.rentPerHour} </p>
-                        <p> Fuel : {car.fuelType} </p>
-                        <p> Max Capacity : {car.capacity} </p>
+                        <p><b>{car.name}</b></p>
+                        <p> Per Hour : <b>${car.rentPerHour}</b></p>
+                        <p> Fuel : <b>{car.fuelType}</b></p>
+                        <p> Max Capacity :<b>{car.capacity}</b></p>
                     </div>
 
-                    <Divider type='horizontal' dashed> Rental Date </Divider>
+                    <Divider type='horizontal' dashed className="dashcolor"> <b className="textcolor">Rental Date</b> </Divider>
                     <RangePicker showTime= {'HH:mm'} format= 'MMM DD yyyy HH:mm' onChange= {selectTimeSlots} />
                     <br />
                         <button className="btn1 mt-2" onClick= {() => {setShowModal(true)}}>See Booked Rentals</button>

@@ -58,8 +58,8 @@ function DefaultLayout(props) {
                 {props.children}
             </div>
             <div className="footer text-center bs1">
-                <p>Designed and Developed by: </p>
-                <p>Juston Smith</p>
+                <p>Designed and Developed at: </p>
+                <p>SludgeCity LLC</p>
 
             </div>
         </div>

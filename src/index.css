@@ -15,7 +15,7 @@ code {
 }
 
 .bs1 { 
-  box-shadow: rgb(73, 72, 72) 0px 2px 4px 0px, rgb(75, 74, 74) 0px 2px 16px 0px; 
+  box-shadow: rgb(73, 72, 72) 0px 2px 4px 0px, rgba(255, 0, 0, 0.459) 0px 2px 16px 0px; 
 }
 
 .spinner {
@@ -41,7 +41,7 @@ p {
   box-shadow: none !important;
   background-color: rgba(0, 0, 0, 0.452) !important;
   color:white !important;
-  border: 1px solid rgb(19, 167, 226) !important; 
+  border: 1px solid rgb(255, 0, 0) !important; 
   border-radius: 3px;
   outline: none;
 }
@@ -63,7 +63,7 @@ button {
   box-shadow: none !important;
   background-color : rgba(0, 0, 0, 0.452) !important;
   color :rgb(255, 255, 255) !important;
-  border: 1px solid rgb(19, 167, 226) !important;
+  border: 1px solid rgb(255, 0, 0) !important;
   padding: 5px 15px !important;
   outline: none !important;
   border-radius: 7px;
@@ -132,7 +132,7 @@ button {
   padding-top: 90px;
 }
 .login label , .login h1{
-  color: rgb(19, 167, 226) !important;
+  color: rgb(255, 0, 0) !important;
   opacity: 0.6;
 }
 
@@ -159,15 +159,15 @@ button {
   transform: translateY(-50%, -50%);
   font-size: 150px !important;
   opacity: 0.5;
-  color: rgb(19, 167, 226);
+  color: rgb(255, 0, 0);
 }
 
 .login-logo:hover {
-  color:rgb(19, 167, 226);
+  color:rgb(255, 0, 0);
 }
 
 .login a {
-  color: rgb(19, 167, 226) !important;
+  color: rgb(255, 0, 0) !important;
   opacity: 0.5;
 }
 
@@ -177,9 +177,17 @@ svg {
 } 
 
 a {
-  color :rgb(19, 167, 226) !important;
+  color :rgb(255, 0, 0) !important;
 }
 
 dropmenu {
   background-color:(0, 0, 0, 0.363);
+}
+
+.textcolor {
+  color: black !important
+}
+
+.dashcolor {
+  color: rgb(255, 0, 0) !important;
 }
